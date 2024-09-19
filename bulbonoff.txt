@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGHT BULB</title>
+    <link rel="icon" type="image/x-icon" href="ILOGO.jpeg">
+    <link rel="stylesheet" href="nayab.css">
+</head>
+<body>
+    <nav>
+        <h1>LIGHT BULB</h1>
+    </nav>
+
+   
+    <div class="bulbcontainer ">
+        <img id="bulb"  src="OFFBULB.jpeg" alt="Bulb">
+        
+    </div>
+    
+   
+    <div class="buttons">
+        <button id="off">TURN OFF</button>
+        <button id="on">TURN ON</button>
+
+    </div>
+
+  
+    <script src="nayab.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(32, 10, 10);
+    color: white;
+    text-align: center;
+    height: 12vh;
+    margin-bottom: 5vmin;
+}
+
+nav h1 {
+    text-align: center;
+    line-height: 5rem;
+}
+
+.bulbcontainer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.bulbcontainer img {
+    height: 20%;
+    width: 20%;
+}
+
+.buttons {
+    background-color: black;
+    text-align: center;
+}
+
+#off, #on {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(32, 10, 10);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#off:hover, #on:hover {
+    background-color: rgb(180, 30, 30); /* Brighter red when hovering */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+let on_bulb = document.getElementById("on")
+let off_bulb = document.getElementById("off")
+const bulb_interaction = document.getElementById('bulb')
+
+
+on_bulb.addEventListener("click",()=>
+{
+    bulb_interaction.src = 'ONBULB.jpeg'
+})
+
+off_bulb.addEventListener("click",()=>
+    {
+        bulb_interaction.src = 'OFFBULB.jpeg'
+    })
